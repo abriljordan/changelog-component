@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: max-content;
+    max-height: max-content;
+    margin: auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex; /* Enable flexbox layout */
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+p {
+    text-align: center;
+    color: #777;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Ensures borders are combined */
+}
+
+.changelog-item {
+    position: relative; /* For positioning the line */
+    height: 50px; /* Set a height for uniformity */
+}
+
+.dot {
+    width: 30px; /* Width of the dot column */
+    position: relative; /* For dot and line positioning */
+}
+
+.dot::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 15px; /* Position of the dot */
+    width: 10px; /* Size of the dot */
+    height: 10px; /* Size of the dot */
+    background: black; /* Color of the dot */
+    border-radius: 50%; /* Make it a circle */
+    transform: translateX(-50%); /* Center the dot */
+
+}
+
+.dot::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 25px; /* Position of the line */
+    width: 2px; /* Thickness of the line */
+    height: calc(100% - 10px); /* Length of the line */
+    background: black; /* Color of the line */
+    transform: translateX(-50%); /* Center the line */
+}
+
+.date {
+    padding-right: 5px; /* Space between date and dot */
+    color: #555;
+    text-align: right;
+}
+
+.description {
+    color: #333;
+}
+
+/* Remove default table border */
+table,
+td {
+    border: none; /* Make borders invisible */
+}
+
+.link {
+    display: inline-table; /* Make it behave like a button */
+    text-align: center;
+    margin: 20px auto; /* Center the button with auto margins */
+    padding: 10px 20px; /* Add padding for button appearance */
+    background-color: black; /* Button background color */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 7px; /* Round corners */
+    font-weight: bold;
+    transition: background-color 0.3s; /* Smooth background change on hover */
+}
+
+.link:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
